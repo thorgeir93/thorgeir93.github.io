@@ -1,2 +1,2 @@
-# thorgeir93.github.io
+# Velkomin á síðuna mína
 Ferilskrá (CV)
