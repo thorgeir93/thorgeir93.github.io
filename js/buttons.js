@@ -19,10 +19,17 @@ var Buttons = (function(){
 	var Navigation = {};
 
 
+	//
+	//ELEMENTS
+	//
+
+	var el = {};
+
 	function init(){
 		console.log("Initialize buttons!");
 
-		body = document.querySelector("body");
+		el.body = document.querySelector("body");
+		el.nav = document.querySelector("nav");
 
 		var button1 = CreateButton("nav");
 		var button2 = CreateButton("nav");
@@ -33,6 +40,7 @@ var Buttons = (function(){
 
 
 		console.log("button1");
+		console.log(typeof button1);
 		console.log(button1);
 
 		console.log("button2");
@@ -41,9 +49,10 @@ var Buttons = (function(){
 
 
 
-		$( button1 ).appendTo( "nav" );
-		$( button2 ).appendTo( "nav" );
-		$( button3 ).appendTo( "nav" );
+		$( "<button></button>" ).appendTo( el.nav );
+		button1.appendTo( el.nav );
+		button2.appendTo( "nav" );
+		button3.appendTo( "nav" );
 	}
 
 
@@ -71,7 +80,7 @@ var Buttons = (function(){
 	/*
 	*
 	*	CSS NAMES
-	*
+	*	TODO:ekki fall heldur frekar föst breyta
 	*/
 	function CSS_navigation(){
 

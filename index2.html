@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CV</title>
+		<!--<style>
+			html, body{
+				height: 100%;
+			    width: 100%;
+			    margin: 0;
+    			padding: 0;
+    			overflow: hidden;
+			}
+			canvas { min-width: 100%; min-height: 100% }
+		</style>-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- 1. Load webcomponents-lite.min.js for polyfill support. -->
+    	<script src="bower_components/webcomponentsjs/webcomponents-lite.min.js">
+    	</script>
+
+    	<!-- 2. Use an HTML Import to bring in some elements. -->
+    	<link rel="import" href="bower_components/iron-flex-layout/classes/iron-flex-layout.html">
+
+
+    	  <!-- main document -- apply mixins in a custom-style element -->
+	  	<style is="custom-style">
+		    .container {
+		      @apply(--layout-horizontal);
+		      @apply(--layout-wrap);
+		    }
+
+			.box-shadow{
+  				box-shadow:0 2px 2px 0 rgba(0, 0, 0, 0.14),
+                  0 1px 5px 0 rgba(0, 0, 0, 0.12),
+                  0 3px 1px -2px rgba(0, 0, 0, 0.2);
+			}
+
+	  	</style>
+	</head>
+	<body>
+		
+		
+		<div class="container">
+	    	<div>One</div>
+	    	<div>Two</div>
+	    	<div>Three</div>
+		</div>
+
+		<div class="layout horizontal wrap">
+		
+			<div>einn</div>
+			<div>tveir</div>
+			<div>þrír</div>
+
+		</div>
+
+		<div class="box-shadow horizontal layout">
+      		<div>navigation bar hér</div>
+      		
+      		<div class="flex">
+      			<div class="vertical layout center">
+      				<section>
+      					<h3>Góðan daginn</h3>
+      					<p>Í dag var góður dagur</p>
+      				</section>
+      			</div> 
+      		</div>
+    	</div>
+	
+		<google-map latitude="37.790" longitude="-122.390"></google-map>
+
+		<!--
+
+		<nav></nav>
+
+		// Three js code and initialize buttons
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="js/three.min.js"></script>
+		<script type="text/javascript" src="js/mainScreen.js"></script>
+		
+	
+		<div style="" ng-buatilmynd="thorgeir"></div>
+
+
+		<script type="text/javascript" src="js/buttons.js"></script>
+		-->
+		
+	</body>
+</html>

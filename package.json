@@ -1,0 +1,25 @@
+{
+  "name": "thorgeir93.github.io",
+  "version": "1.0.0",
+  "description": "ferilskra",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thorgeir93/thorgeir93.github.io.git"
+  },
+  "author": "thorgeir93",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thorgeir93/thorgeir93.github.io/issues"
+  },
+  "homepage": "https://github.com/thorgeir93/thorgeir93.github.io#readme",
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-sass": "^2.1.1"
+  }
+}

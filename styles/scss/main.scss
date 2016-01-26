@@ -1,0 +1,42 @@
+/*scss*/
+
+$main-backg-color: #F9F9F9;
+$cont-backg-color: #FFFFFF;
+$font-stack: "Trebuchet MS", Helvetica, sans-serif;
+$font-size: 1em;
+$font-color: gray;
+
+h3{
+	text-transform: uppercase;
+}
+
+section{
+	width: 90%;
+	border-bottom: 1px dashed gray;
+}
+
+body{
+	background-color: $main-backg-color;
+	font: 100% $font-stack;
+	font-size: $font-size;
+	color: $font-color;
+}
+
+.box-shadow{
+	box-shadow:0 2px 2px 0 rgba(0, 0, 0, 0.14),
+      0 1px 5px 0 rgba(0, 0, 0, 0.12),
+      0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+.center{
+	margin: 0 auto 0 auto;
+}
+
+
+.container {
+	@extend .box-shadow;
+	@extend .center;
+	background-color: $cont-backg-color;
+	padding:20px;
+	width:90%;
+}
