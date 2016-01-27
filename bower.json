@@ -1,0 +1,18 @@
+{
+  "name": "thorgeir93.github.io",
+  "description": "Ferilskrá (CV)",
+  "main": "gulpfile.js",
+  "authors": [
+    "thorgeir93"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/thorgeir93/thorgeir93.github.io",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
