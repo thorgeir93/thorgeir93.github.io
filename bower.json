@@ -1,7 +1,7 @@
 {
   "name": "thorgeir93.github.io",
-  "description": "Ferilskrá (CV)",
-  "main": "gulpfile.js",
+  "description": "ferilskra",
+  "main": "./views/index.html",
   "authors": [
     "thorgeir93"
   ],
@@ -14,5 +14,12 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "iron-elements": "PolymerElements/iron-elements#~1.0.7",
+    "polymer": "Polymer/polymer#1.2.0"
+  },
+  "resolutions": {
+    "polymer": "1.2.0"
+  }
 }
