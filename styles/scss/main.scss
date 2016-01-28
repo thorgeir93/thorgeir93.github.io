@@ -1,6 +1,42 @@
 /*scss*/
 
 
+
+/*********************
+TEST STYLE
+***********************/
+
+.wrap{
+	height: 100%;
+}
+
+.side-frame{
+	width: 400px;
+}
+
+.container{
+
+}
+
+.full-height{
+	height: 100%;
+}
+
+div{
+	border: 1px solid red;
+}
+
+p{
+	text-align: center;
+}
+
+
+
+
+
+
+
+
 /*********************
 	VARIABLES
 **********************/
@@ -12,8 +48,13 @@ $font-size: 1em;
 $font-color: gray;
 
 
-
-
+html,body{
+	height: 100%;
+    width: 100%;
+    margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
 
 h3{
 	text-transform: uppercase;
