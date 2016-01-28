@@ -1,0 +1,60 @@
+
+
+//				//
+//	VARIABLES	//
+//				//
+
+
+
+$main-backg-color: #F9F9F9;
+$color-old-red:#B93636;
+$font-backg-color: #FFFFFF;
+$font-stack: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;;
+$font-size: 1em;
+$font-color: gray;
+
+
+
+//COLORS
+$color-header: #acd;
+
+
+
+
+//
+//LAYOUT COMPONENT SIZES
+//
+$frame-small-min-width: 200px;
+$frame-small-max-width: 400px;
+
+$frame-big-min-width: 800px;
+$frame-slider-min-width: 20px;
+$chrome-slider-size: 15px;
+
+
+$frame-header-height: 100px;
+
+
+//
+//BREAK POINT FOR LAYOUT
+//
+
+/*
+break-small is a break point when layout
+should spit down, i.e. when all components
+has reach the minimun size. 
+(used in "responsive.scss")
+*/
+$break-small: $frame-small-min-width 
+			+ $frame-big-min-width 
+			+ $frame-slider-min-width
+			- $chrome-slider-size*2;
+
+
+
+
+
+%block-centered-hor{
+	display: block;
+	margin: 0 auto 0 auto;
+}

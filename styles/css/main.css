@@ -1,31 +1,65 @@
 /*scss*/
+/*
+break-small is a break point when layout
+should spit down, i.e. when all components
+has reach the minimun size. 
+(used in "responsive.scss")
+*/
 /*********************
 TEST STYLE
 ***********************/
-.wrap {
+.frame-slider,
+.frame-small,
+.frame-big,
+.wrap,
+.row {
   height: 100%; }
 
-.side-frame {
-  width: 400px; }
+.header {
+  background-color: #acd;
+  height: 100px; }
 
-.full-height {
-  height: 100%; }
+.frame-small {
+  background-color: #555;
+  /* -- */ }
+
+.frame-big {
+  background-color: #aaa;
+  /* -- */ }
+
+.frame-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 20px;
+  background-color: gray; }
+
+#settings {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  float: left; }
+
+#search-table {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  float: left; }
 
 div {
-  border: 1px solid red; }
+  -border: 1px solid red;
+  /* -- */ }
 
 p {
-  text-align: center; }
+  text-align: center;
+  /* -- */ }
 
-/*********************
-	VARIABLES
-**********************/
 html, body {
   height: 100%;
   width: 100%;
   margin: 0;
-  padding: 0;
-  overflow: hidden; }
+  padding: 0; }
 
 h3 {
   text-transform: uppercase;
@@ -36,22 +70,9 @@ section {
   border-bottom: 1px dashed gray; }
 
 body {
+  padding: 0 15px 0 15px;
+  /* -- */
   background-color: #F9F9F9;
   font: 100% "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1em;
   color: gray; }
-
-paper-material {
-  padding: 20px 20px;
-  margin: 10px 10px; }
-
-.box-shadow, .container {
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2); }
-
-.center, .container {
-  margin: 0 auto 0 auto; }
-
-.container {
-  background-color: #FFFFFF;
-  padding: 20px;
-  width: 90%; }
