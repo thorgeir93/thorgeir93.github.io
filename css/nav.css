@@ -1,0 +1,12 @@
+/*
+*
+*	NAVIGATION
+*
+*/
+nav {
+  max-width: 80%; }
+  nav .navbtn {
+    outline: 2px solid white;
+    background: none;
+    width: 200px !important;
+    height: 200px; }
