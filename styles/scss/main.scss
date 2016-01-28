@@ -1,13 +1,23 @@
 /*scss*/
 
+
+/*********************
+	VARIABLES
+**********************/
 $main-backg-color: #F9F9F9;
+$color-old-red:#B93636;
 $cont-backg-color: #FFFFFF;
-$font-stack: "Trebuchet MS", Helvetica, sans-serif;
+$font-stack: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;;
 $font-size: 1em;
 $font-color: gray;
 
+
+
+
+
 h3{
 	text-transform: uppercase;
+	color:$color-old-red;
 }
 
 section{
@@ -20,6 +30,13 @@ body{
 	font: 100% $font-stack;
 	font-size: $font-size;
 	color: $font-color;
+}
+
+
+
+paper-material{
+	padding: 20px 20px;
+	margin: 10px 10px;
 }
 
 .box-shadow{
