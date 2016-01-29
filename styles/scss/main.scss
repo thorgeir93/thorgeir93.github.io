@@ -1,13 +1,101 @@
 /*scss*/
+@import './_variables';
 
-$main-backg-color: #F9F9F9;
-$cont-backg-color: #FFFFFF;
-$font-stack: "Trebuchet MS", Helvetica, sans-serif;
-$font-size: 1em;
-$font-color: gray;
+
+
+/*********************
+TEST STYLE
+***********************/
+
+
+.frame-slider,
+.frame-small,
+.frame-big,
+.wrap,
+.row /* -- */
+{
+	height: 100%;
+}
+
+
+.header{
+	background-color: $color-header;
+	height: $frame-header-height;
+}
+
+
+.frame-small{
+	//padding: $frame-slider-min-width; 
+	background-color: #555; /* -- */
+}
+
+.frame-big{
+	background-color: #aaa; /* -- */
+	//max-width: ;
+	//width: 100%;
+	//min-width: $frame-big-min-width;
+}
+
+.frame-slider{
+	position: absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	width:$frame-slider-min-width;
+	background-color: $font-color;
+}
+
+#settings{
+	display: block;
+	position: relative;
+	box-sizing:border-box;
+	float: left;
+}
+
+#search-table{
+	display: block;
+	position: relative;
+	box-sizing:border-box;
+	float: left;
+	//display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+div{
+	-border: 1px solid red; /* -- */
+}
+
+p{
+	text-align: center; /* -- */
+}
+
+
+
+//--------------------
+
+
+html,body{
+	height: 100%;
+    width: 100%;
+    margin: 0;
+	padding: 0;
+
+	//overflow: hidden;
+}
 
 h3{
 	text-transform: uppercase;
+	color:$color-old-red;
 }
 
 section{
@@ -16,27 +104,9 @@ section{
 }
 
 body{
+	padding: 0 15px 0 15px;/* -- *///15px -> size of chrome scroll slider
 	background-color: $main-backg-color;
 	font: 100% $font-stack;
 	font-size: $font-size;
 	color: $font-color;
-}
-
-.box-shadow{
-	box-shadow:0 2px 2px 0 rgba(0, 0, 0, 0.14),
-      0 1px 5px 0 rgba(0, 0, 0, 0.12),
-      0 3px 1px -2px rgba(0, 0, 0, 0.2);
-}
-
-.center{
-	margin: 0 auto 0 auto;
-}
-
-
-.container {
-	@extend .box-shadow;
-	@extend .center;
-	background-color: $cont-backg-color;
-	padding:20px;
-	width:90%;
 }
