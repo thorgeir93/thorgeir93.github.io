@@ -3,6 +3,11 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var jade = require('gulp-jade');
+var compass = require('gulp-compass');
+var plumber = require('gulp-plumber');
+var notify = require('gulp-notify');
+var rename = require('gulp-rename');
+var minifycss = require('gulp-minify-css');
 var browserSync = require('browser-sync').create();
 //var vfs = require('vinyl-fs');
 
@@ -50,30 +55,64 @@ gulp.task('jade', function () {
 
 gulp.task('serve', ['html','js','scss'], function () {
     // add browserSync.reload to all js and html files
-
-
-
     gulp.watch(["templates/*.jade"], ['templates']);
-    gulp.watch(["styles/scss/*.scss"], ['sass']);
+    gulp.watch(["styles/scss/*.scss"], ['styles']).on('change', browserSync.reload);
     gulp.watch(["views/*.html", "js/*.js"]).on('change', browserSync.reload);
 });
 
 
 // Compile sass into CSS & auto-inject into browsers
-gulp.task('sass', function() {
+/*gulp.task('sass', function() {
     return gulp.src("./styles/scss/*.scss")
         .pipe(sass())
         .pipe(gulp.dest("./styles/css"))
         .pipe(browserSync.stream());
-});
+});*/
 
+
+
+
+/***
+TEKIÐ AF NETINU
+//  https://gist.github.com/aaronwaldon/8657432
+***/
+
+var notifyInfo = {
+    title: 'Gulp'
+    //icon: path.join(__dirname, 'gulp.png')
+};
+
+//error notification settings for plumber
+var plumberErrorHandler = { errorHandler: notify.onError({
+        title: notifyInfo.title,
+        icon: notifyInfo.icon,
+        message: "Error: <%= error.message %>"
+    })
+};
+
+//styles
+gulp.task('styles', function() {
+    return gulp.src(['styles/**/*.scss'])
+        .pipe(plumber(plumberErrorHandler))
+        .pipe(compass({
+            css: 'styles/css',
+            sass: 'styles/scss'
+            //image: 'html/images'
+        }))
+        //.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 7', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
+        .pipe(gulp.dest('styles/css'))
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(minifycss())
+        .pipe(gulp.dest('styles/css'))
+        .pipe(browserSync.stream());
+});
 
 /*
 gulp.task('js-hint', function(){
 
 });*/
 
-gulp.task('default', ['browser-sync','serve', 'templates', 'sass']);
+gulp.task('default', ['browser-sync','serve', 'templates', 'styles'/*, 'sass'*/]);
 
 
 

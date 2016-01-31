@@ -28,11 +28,16 @@ $frame-small-min-width: 200px;
 $frame-small-max-width: 400px;
 
 $frame-big-min-width: 800px;
-$frame-slider-min-width: 20px;
+$slider-min-width: 20px;
 $chrome-slider-size: 15px;
 
 
-$frame-header-height: 100px;
+$frame-header-height: 50px;
+
+
+//$slider-width: 6%;
+//$table-width: 100% - $slider-width;
+$table-width: 100%;
 
 
 //
@@ -47,7 +52,7 @@ has reach the minimun size.
 */
 $break-small: $frame-small-min-width 
 			+ $frame-big-min-width 
-			+ $frame-slider-min-width
+			+ $slider-min-width
 			- $chrome-slider-size*2;
 
 
@@ -57,4 +62,16 @@ $break-small: $frame-small-min-width
 %block-centered-hor{
 	display: block;
 	margin: 0 auto 0 auto;
+}
+
+
+
+@function calc-percent($target, $container) {
+  @return ($target / $container) * 100%;
+}
+
+@mixin calc($key, $value) {
+  #{$key}: -webkit-calc(#{$value});
+  #{$key}: -moz-calc(#{$value});
+  #{$key}: calc(#{$value});
 }

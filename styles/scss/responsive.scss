@@ -4,35 +4,15 @@
 
 
 @media only screen and (max-width: $break-small) {
-    #settings{
-    	//width: 100%;
-		//min-width: auto;
-		//max-width: auto;
-    }
+  .slider{
+  	//visibility: hidden;
+  	//display: none;
+  }
 
-    .frame-slider{
-    	visibility: hidden;
-    	display: none;
-    }
-
-	.horizontal, .layout{
-
-	}
-	
-
-    .side-frame {
-        /*width: $frame-small-min-width !important;*/
-    }
+  .view{
+    width: 100%;
+  }
 }
-
-/*@media only screen and (max-width: $break-small) {
-	width: 100px;
-	float: none;
-}
-@media screen and (min-width: $break-large) {
-	float: right;
-}
-
 
 
 
@@ -48,4 +28,4 @@
   @else if $media == wide-screens {
     @media only screen and (min-width: $break-large) { @content; }
   }
-}*/
+}

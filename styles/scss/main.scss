@@ -1,63 +1,140 @@
 /*scss*/
+
+//$path-bootstrap: "";
+
 @import './_variables';
+@import 'compass/css3';
+//@import 'compass/css3';
+//@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid.scss";
+
+//@import "../../bower_components/bootstrap/less/mixins/grid.less";
+//(reference) 
+
+
+.shadow {
+    @include box-shadow(#000 5px 5px 5px);
+}
+
+
+//@import '../bower_components/bootstrap/dist';
+
+/*==========
+  TEST STYLE
+  ==========*/
+.blu{ background-color: blue; 	}
+.red{ background-color: red; 		}
+.yel{ background-color: yellow; }
+.gre{ background-color: green; 	}
+/*=================*/
 
 
 
-/*********************
-TEST STYLE
-***********************/
+
+/*===========
+  GRID LAYOUT
+  ===========*/
+.row{
+	margin:0;
+}
+.row{
+	display:block;
+	position: relative;
+	height:100%;
+}
+.row{
+	height:100% !important;
+}
 
 
-.frame-slider,
+.frame-small,
+.frame-big
+{
+	padding:0;
+	height:100%;
+}
+
+// Generate the small columns
+/*@mixin make-sm-column($columns) {
+  position: relative;
+  min-height: 1px;
+  padding-left:  (3px / 2);
+  padding-right: (3px / 2);
+
+  @media (min-width: 5px) {
+    float: left;
+    width: percentage((12 / 6));
+  }
+}*/
+
+.frame-small{
+	//@include make-sm-column(12, 20px);
+	//@include border-radius(10px);
+	background-color: #555; /* -- */
+
+}
+.frame-big{
+	background-color: #111; /* -- */
+}
+
+
 .frame-small,
 .frame-big,
 .wrap,
 .row /* -- */
 {
-	height: 100%;
+	//min-height: 100%;
+}
+
+.wrap{
+	min-height:100%;
 }
 
 
-.header{
-	background-color: $color-header;
-	height: $frame-header-height;
+.container-fluid{
+	padding:0;
 }
 
-
-.frame-small{
-	//padding: $frame-slider-min-width; 
-	background-color: #555; /* -- */
-}
-
-.frame-big{
-	background-color: #aaa; /* -- */
-	//max-width: ;
-	//width: 100%;
-	//min-width: $frame-big-min-width;
-}
-
-.frame-slider{
-	position: absolute;
-	top:0;
-	left:0;
-	bottom:0;
-	width:$frame-slider-min-width;
+.slider{
+	//@include background-size(20px 100%);
+	//height:100%;
+	//min-height:100%;
+	//height:100px; /* -- */
+	float:left;
+	width:$slider-min-width;
+	height:100px; 
 	background-color: $font-color;
 }
 
-#settings{
-	display: block;
-	position: relative;
-	box-sizing:border-box;
-	float: left;
+.frame-head,
+.content,
+.table{
+	width:100%;
 }
 
-#search-table{
-	display: block;
-	position: relative;
-	box-sizing:border-box;
-	float: left;
-	//display: inline-block;
+.table{ 
+	height:100%;
+}
+
+.content{
+	background-color: yellow;
+}
+
+.frame-head{
+	background-color: $color-header;
+	height: $frame-header-height; /* -- */
+}
+
+
+.view{
+	//width of view will be width size 
+	//of the parent minus slider width
+	@include calc("width","100% - #{$slider-min-width}");
+	float:right;
+}
+
+.my-table,
+.content{
+	//padding:30px;
 }
 
 
@@ -65,9 +142,12 @@ TEST STYLE
 
 
 
-
-
-
+/*
+.main-header{
+	background-color: $color-header;
+	height: $frame-header-height;
+}
+*/
 
 
 
@@ -76,9 +156,10 @@ div{
 }
 
 p{
-	text-align: center; /* -- */
+	font-size:40px;
+	text-align:center;
+	margin:0;
 }
-
 
 
 //--------------------
@@ -86,27 +167,17 @@ p{
 
 html,body{
 	height: 100%;
-    width: 100%;
-    margin: 0;
+  width: 100%;
+  margin: 0;
 	padding: 0;
-
-	//overflow: hidden;
-}
-
-h3{
-	text-transform: uppercase;
-	color:$color-old-red;
-}
-
-section{
-	width: 90%;
-	border-bottom: 1px dashed gray;
 }
 
 body{
-	padding: 0 15px 0 15px;/* -- *///15px -> size of chrome scroll slider
+	//padding: 0 15px 0 15px;/* -- *///15px -> size of chrome scroll slider
 	background-color: $main-backg-color;
 	font: 100% $font-stack;
 	font-size: $font-size;
 	color: $font-color;
 }
+
+

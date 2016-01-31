@@ -5,74 +5,145 @@ should spit down, i.e. when all components
 has reach the minimun size. 
 (used in "responsive.scss")
 */
-/*********************
-TEST STYLE
-***********************/
-.frame-slider,
-.frame-small,
-.frame-big,
-.wrap,
+.shadow {
+  -moz-box-shadow: #000 5px 5px 5px;
+  -webkit-box-shadow: #000 5px 5px 5px;
+  box-shadow: #000 5px 5px 5px;
+}
+
+/*==========
+  TEST STYLE
+  ==========*/
+.blu {
+  background-color: blue;
+}
+
+.red {
+  background-color: red;
+}
+
+.yel {
+  background-color: yellow;
+}
+
+.gre {
+  background-color: green;
+}
+
+/*=================*/
+/*===========
+  GRID LAYOUT
+  ===========*/
 .row {
-  height: 100%; }
+  margin: 0;
+}
 
-.header {
-  background-color: #acd;
-  height: 100px; }
+.row {
+  display: block;
+  position: relative;
+  height: 100%;
+}
 
+.row {
+  height: 100% !important;
+}
+
+.frame-small,
+.frame-big {
+  padding: 0;
+  height: 100%;
+}
+
+/*@mixin make-sm-column($columns) {
+  position: relative;
+  min-height: 1px;
+  padding-left:  (3px / 2);
+  padding-right: (3px / 2);
+
+  @media (min-width: 5px) {
+    float: left;
+    width: percentage((12 / 6));
+  }
+}*/
 .frame-small {
   background-color: #555;
-  /* -- */ }
+  /* -- */
+}
 
 .frame-big {
-  background-color: #aaa;
-  /* -- */ }
+  background-color: #111;
+  /* -- */
+}
 
-.frame-slider {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
+.wrap {
+  min-height: 100%;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.slider {
+  float: left;
   width: 20px;
-  background-color: gray; }
+  height: 100px;
+  background-color: gray;
+}
 
-#settings {
-  display: block;
-  position: relative;
-  box-sizing: border-box;
-  float: left; }
+.frame-head,
+.content,
+.table {
+  width: 100%;
+}
 
-#search-table {
-  display: block;
-  position: relative;
-  box-sizing: border-box;
-  float: left; }
+.table {
+  height: 100%;
+}
 
+.content {
+  background-color: yellow;
+}
+
+.frame-head {
+  background-color: #acd;
+  height: 50px;
+  /* -- */
+}
+
+.view {
+  width: -webkit-calc(100% - 20px);
+  width: -moz-calc(100% - 20px);
+  width: calc(100% - 20px);
+  float: right;
+}
+
+/*
+.main-header{
+	background-color: $color-header;
+	height: $frame-header-height;
+}
+*/
 div {
   -border: 1px solid red;
-  /* -- */ }
+  /* -- */
+}
 
 p {
+  font-size: 40px;
   text-align: center;
-  /* -- */ }
+  margin: 0;
+}
 
 html, body {
   height: 100%;
   width: 100%;
   margin: 0;
-  padding: 0; }
-
-h3 {
-  text-transform: uppercase;
-  color: #B93636; }
-
-section {
-  width: 90%;
-  border-bottom: 1px dashed gray; }
+  padding: 0;
+}
 
 body {
-  padding: 0 15px 0 15px;
-  /* -- */
   background-color: #F9F9F9;
   font: 100% "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1em;
-  color: gray; }
+  color: gray;
+}
