@@ -1,7 +1,10 @@
 
 //import file
 
-//@import "customVariables";
-//@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
-//@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-compass";
-//@import "custom";
+@import "customVariables";
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-compass";
+@import 'compass/css3';
+@import "custom";
+
+@import './_variables';

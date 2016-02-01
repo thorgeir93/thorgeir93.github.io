@@ -1,19 +1,5 @@
 /*scss*/
-
-//$path-bootstrap: "";
-
-@import './_variables';
-@import 'compass/css3';
-//@import 'compass/css3';
-//@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid.scss";
-
-//@import "../../bower_components/bootstrap/less/mixins/grid.less";
-//(reference) 
-
-
-.shadow {
-    @include box-shadow(#000 5px 5px 5px);
-}
+@import 'styles';
 
 
 //@import '../bower_components/bootstrap/dist';
@@ -41,6 +27,7 @@
 	position: relative;
 	height:100%;
 }
+
 .row{
 	height:100% !important;
 }
@@ -49,30 +36,22 @@
 .frame-small,
 .frame-big
 {
+	margin:0;
 	padding:0;
 	height:100%;
 }
 
-// Generate the small columns
-/*@mixin make-sm-column($columns) {
-  position: relative;
-  min-height: 1px;
-  padding-left:  (3px / 2);
-  padding-right: (3px / 2);
-
-  @media (min-width: 5px) {
-    float: left;
-    width: percentage((12 / 6));
-  }
-}*/
 
 .frame-small{
-	//@include make-sm-column(12, 20px);
-	//@include border-radius(10px);
+	//make 12 columns with padding equal zero
+	@include make-sm-column(12, 0);
+	@include make-md-column(4, 0);
 	background-color: #555; /* -- */
-
 }
+
 .frame-big{
+	@include make-sm-column(12, 0);
+	@include make-md-column(8, 0);
 	background-color: #111; /* -- */
 }
 
@@ -95,13 +74,11 @@
 }
 
 .slider{
-	//@include background-size(20px 100%);
-	//height:100%;
-	//min-height:100%;
-	//height:100px; /* -- */
+	@extend .hidden-xs;
+	@extend .hidden-sm;
 	float:left;
 	width:$slider-min-width;
-	height:100px; 
+	height:100px;
 	background-color: $font-color;
 }
 
@@ -137,17 +114,6 @@
 	//padding:30px;
 }
 
-
-
-
-
-
-/*
-.main-header{
-	background-color: $color-header;
-	height: $frame-header-height;
-}
-*/
 
 
 
