@@ -1,0 +1,81 @@
+//
+//GRID LAYOUT
+//
+
+.container-fluid{
+	padding:0;
+	height: 100%;
+}
+
+.frame-small,
+.frame-big
+{
+	margin:0;
+	padding:0;
+	height:100%;
+}
+
+.frame-small{
+	//make 12 columns with padding equal zero
+	@include make-sm-column(12, 0);
+	@include make-md-column(4, 0);
+	background-color: #555; //--
+}
+
+.frame-big{
+	@include make-sm-column(12, 0);
+	@include make-md-column(8, 0);
+	background-color: #111; //--
+}
+
+.view{
+	//width of view will be width size 
+	//of the parent minus slider width
+	@include calc("width","100% - #{$slider-min-width}");
+	float:right;
+}
+
+.frame-head,
+.content
+{
+	width:100%;
+}
+
+.content{
+	background-color: yellow;
+}
+
+.frame-head{
+	background-color: $color-header;
+	height: $frame-header-height; //--
+}
+
+.my-table{ 
+	background-color: green;
+	height:100%;
+}
+
+.slider{
+	@extend .hidden-xs;
+	@extend .hidden-sm;
+	float:left;
+	width:$slider-min-width;
+	height:100%;
+	background-color: $font-color;
+	//background-color: red;
+}
+
+
+//
+//RESPONSIVE GRID
+//
+
+@media (max-width: $screen-sm-max) {
+  .container-fluid{
+    height: auto;
+  }
+
+  .view{
+    width: 100%;
+  }
+}

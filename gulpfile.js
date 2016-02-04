@@ -56,7 +56,7 @@ gulp.task('jade', function () {
 gulp.task('serve', ['html','js','scss'], function () {
     // add browserSync.reload to all js and html files
     gulp.watch(["templates/*.jade"], ['templates']);
-    gulp.watch(["styles/scss/*.scss"], ['styles']).on('change', browserSync.reload);
+    gulp.watch(["styles/scss/*.scss"], ['styles']);
     gulp.watch(["views/*.html", "js/*.js"]).on('change', browserSync.reload);
 });
 
@@ -92,7 +92,8 @@ var plumberErrorHandler = { errorHandler: notify.onError({
 
 //styles
 gulp.task('styles', function() {
-    return gulp.src(['styles/**/*.scss'])
+
+    return gulp.src(['styles/scss/*.scss'])
         .pipe(plumber(plumberErrorHandler))
         .pipe(compass({
             css: 'styles/css',
@@ -101,10 +102,10 @@ gulp.task('styles', function() {
         }))
         //.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 7', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
         .pipe(gulp.dest('styles/css'))
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(minifycss())
-        .pipe(gulp.dest('styles/css'))
         .pipe(browserSync.stream());
+        //.pipe(rename({ suffix: '.min' }))
+        //.pipe(minifycss())
+        //.pipe(gulp.dest('styles/css'));
 });
 
 /*

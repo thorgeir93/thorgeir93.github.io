@@ -46,7 +46,7 @@ bower_components
 .sass-cache
 
 #css files. 
-#Reason:It's never touched execpt when experimenting and it will generate when executing the gulpfile.
+#Reason:It's never touched execpt for experimenting edit and it will generates when executing the gulpfile.
 styles/css
 
 #HTML files. Reason:same as above.
