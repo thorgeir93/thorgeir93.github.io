@@ -1,7 +1,32 @@
 extends layout
 
 block index
-	div.container-fluid
+	paper-toolbar
+		span.title HEADER
+	div.container.horizontal.layout#testing
+		div.flex-3.colorman1
+			//p hall1
+		div.colorman2
+			//div.slider
+		div.flex-1.colorman3
+			//p hallo3
+
+	//paper-drawer-panel
+		paper-header-panel(drawer)
+			paper-toolbar
+				span(class="title") Application2
+			div.drawer
+				h3 DRAWER content
+		paper-header-panel(main).flex
+			paper-toolbar
+				paper-icon-button(icon="menu" paper-drawer-toggle)
+				div Application1
+			div.main 
+				h3 MAIN content
+
+
+
+	//div.container-fluid
 		div.row
 			div.frame-big
 				div.frame-head
@@ -9,12 +34,14 @@ block index
 					p Bjarni
 					p Þorgeir 
 					p halló
+					p halló
 
 			div.frame-small
-				div.slider
-				div.view
-					div.frame-head
-					div.my-table
-						p halló
-						p halló
-						p hall
+				div.frame-fixed
+					div.slider
+					div.view
+						div.frame-head
+						div.my-table
+							p halló
+							p halló
+							p hall
