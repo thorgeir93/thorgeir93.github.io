@@ -1,7 +1,0 @@
-git add .
-git reset bower_components/
-git reset node_modules/
-git commit -m "Message"
-[laga conflict]
-git pull origin master
-git push origin master
