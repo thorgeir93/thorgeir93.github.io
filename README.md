@@ -2,6 +2,11 @@
 
 ## Development setup 
 
+# Watching Sass changes
+In the root of the repo:
+```
+sass --watch assets/sass:assets/css
+```
 
 Spectral by HTML5 UP
 html5up.net | @ajlkn
