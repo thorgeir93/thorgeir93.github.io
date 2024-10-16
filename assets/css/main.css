@@ -84,7 +84,7 @@ html {
 }
 
 body {
-  background: #2e3842;
+  background: #222;
 }
 body.is-preload *, body.is-preload *:before, body.is-preload *:after {
   -moz-animation: none !important;
@@ -1462,7 +1462,7 @@ input[type=password]:focus,
 input[type=email]:focus,
 select:focus,
 textarea:focus {
-  box-shadow: 0 0 0 2px #21b2a6;
+  box-shadow: 0 0 0 2px #222;
 }
 
 select {
@@ -1546,13 +1546,13 @@ input[type=radio] + label:before {
 }
 input[type=checkbox]:checked + label:before,
 input[type=radio]:checked + label:before {
-  background: #2e3842;
+  background: #222;
   color: #fff;
   content: "\f00c";
 }
 input[type=checkbox]:focus + label:before,
 input[type=radio]:focus + label:before {
-  box-shadow: 0 0 0 2px #21b2a6;
+  box-shadow: 0 0 0 2px #222;
 }
 
 input[type=checkbox] + label:before {
@@ -2265,7 +2265,7 @@ button:disabled,
   padding: 0;
 }
 .wrapper.style1 {
-  background-color: #21b2a6;
+  background-color: #222;
   color: rgb(199.5, 235.75, 232.75);
 }
 .wrapper.style1 strong, .wrapper.style1 b {
@@ -2307,7 +2307,7 @@ button:disabled,
 }
 .wrapper.style1 select option {
   color: #ffffff;
-  background: #21b2a6;
+  background: #222;
 }
 .wrapper.style1 input[type=checkbox] + label,
 .wrapper.style1 input[type=radio] + label {
@@ -2320,7 +2320,7 @@ button:disabled,
 .wrapper.style1 input[type=checkbox]:checked + label:before,
 .wrapper.style1 input[type=radio]:checked + label:before {
   background: #ffffff;
-  color: #21b2a6;
+  color: #222;
 }
 .wrapper.style1 ::-webkit-input-placeholder {
   color: rgb(166.2, 224.2, 219.4) !important;
@@ -2389,7 +2389,7 @@ button:disabled,
   }
 }
 .wrapper.style2 {
-  background-color: #2e3842;
+  background-color: #222;
 }
 .wrapper.style3 {
   background-color: #505393;
@@ -2685,7 +2685,7 @@ button:disabled,
   -ms-transition: -ms-transform 0.5s ease;
   transition: transform 0.5s ease;
   -webkit-overflow-scrolling: touch;
-  background: #21b2a6;
+  background: #222222;
   color: #ffffff;
   height: 100%;
   max-width: 80%;
@@ -2765,7 +2765,7 @@ body.is-menu-visible #menu {
   -webkit-transition: background-color 0.2s ease;
   -ms-transition: background-color 0.2s ease;
   transition: background-color 0.2s ease;
-  background: #2e3842;
+  background: #222;
   height: 3em;
   left: 0;
   line-height: 3em;
@@ -2983,7 +2983,7 @@ body.is-menu-visible #menu {
   -ms-transition-delay: 1.25s;
   transition-delay: 1.25s;
   content: "";
-  background: #2e3842;
+  background: #222;
   display: block;
   width: 100%;
   height: 100%;
@@ -3136,7 +3136,7 @@ body.is-mobile #main > header {
 /* Footer */
 #footer {
   padding: 6em 0 4em 0;
-  background-color: rgb(29.2428571429, 35.6, 41.9571428571);
+  background-color: rgb(13.6, 13.6, 13.6);
   text-align: center;
 }
 #footer .icons {
@@ -3207,7 +3207,7 @@ body.landing #page-wrapper {
   padding-top: 0;
 }
 body.landing #footer {
-  background-color: rgba(29.2428571429, 35.6, 41.9571428571, 0.9);
+  background-color: rgba(13.6, 13.6, 13.6, 0.9);
 }
 
 body.is-mobile.landing #page-wrapper {
@@ -3224,7 +3224,7 @@ body.is-mobile.landing .wrapper.style4 {
   background-size: cover;
 }
 body.is-mobile.landing #footer {
-  background-color: rgb(29.2428571429, 35.6, 41.9571428571);
+  background-color: rgb(13.6, 13.6, 13.6);
 }
 
 /*# sourceMappingURL=main.css.map */
