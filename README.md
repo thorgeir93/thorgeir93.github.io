@@ -2,10 +2,14 @@
 
 ## Development setup 
 
-# Watching Sass changes
+### Watching Sass changes
 In the root of the repo:
 ```
-sass --watch assets/sass:assets/css
+# Start the server
+$ python3 -m http.server
+
+# Auto generate .css files after changes on .scss files.
+$ sass --watch assets/sass:assets/css
 ```
 
 # TODO
