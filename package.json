@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "sass": "^1.79.5"
+  },
+  "name": "thorgeir93.github.io",
+  "version": "1.0.0",
+  "description": "## Development setup",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
