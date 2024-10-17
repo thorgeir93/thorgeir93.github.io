@@ -3083,6 +3083,10 @@ body.is-preload #banner:after {
 .timeline {
   display: grid;
 }
+.timeline .major {
+  text-align: center;
+  margin: auto;
+}
 
 #timeline .wrap {
   position: absolute;
@@ -3093,7 +3097,7 @@ body.is-preload #banner:after {
 }
 #timeline .vLine {
   border-left: 4px solid #aaaaaa;
-  height: 300px;
+  height: 400px;
 }
 #timeline .entries {
   width: calc(100% - 80px);
@@ -3104,7 +3108,7 @@ body.is-preload #banner:after {
 #timeline .entries .entry {
   width: calc(50% - 80px);
   float: left;
-  padding: 20px;
+  padding: 30px;
   clear: both;
   text-align: right;
 }
@@ -3113,21 +3117,25 @@ body.is-preload #banner:after {
 }
 #timeline .entries .entry .title {
   font-size: 32px;
-  margin-bottom: 12px;
   position: relative;
   color: #fff;
+}
+#timeline .entries .entry .title .inline-title {
+  font-size: 50%;
+  line-height: 1.4em;
+  margin: 0;
 }
 #timeline .entries .entry .title:before {
   content: "";
   position: absolute;
-  width: 8px;
-  height: 8px;
+  width: 18px;
+  height: 18px;
   border: 4px solid #ffffff;
   background-color: #1D1D1D;
   border-radius: 100%;
   top: 50%;
   transform: translateY(-50%);
-  right: -109px;
+  right: -124px;
   z-index: 1000;
 }
 #timeline .entries .entry .title.big:before {
@@ -3139,6 +3147,7 @@ body.is-preload #banner:after {
   color: #aaa;
 }
 #timeline .entries .entry .entry-body p {
+  font-size: 80%;
   line-height: 1.4em;
 }
 #timeline .entries .entry:nth-child(2n) {
@@ -3146,7 +3155,7 @@ body.is-preload #banner:after {
   float: right;
 }
 #timeline .entries .entry:nth-child(2n) .title:before {
-  left: -99px;
+  left: -114px;
 }
 #timeline .entries .entry:nth-child(2n) .title.big:before {
   transform: translate(-8px, -50%);
@@ -3162,7 +3171,7 @@ body.is-preload #banner:after {
     font-size: 24px;
   }
   #timeline .entries .entry .title:before {
-    left: -53px;
+    left: -62px;
     right: 0;
     transform: translateX(-50%);
   }
@@ -3171,7 +3180,7 @@ body.is-preload #banner:after {
     float: none;
   }
   #timeline .entries .entry:nth-child(2n) .title:before {
-    left: -53px;
+    left: -62px;
     right: auto;
     transform: translateX(-50%);
   }
