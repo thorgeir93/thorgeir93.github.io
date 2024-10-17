@@ -41,6 +41,7 @@
         border2:            #fff,
         border2-bg:         rgba(144,144,144,0.5),
         theme-color:        #ce7b1c,
+        banner-pic-dark-color:        #1e1808,
 
         accent1: (
             // bg:             #21b2a6,
@@ -66,7 +67,9 @@
         ),
 
         accent3: (
-            bg:             #00f0ff,
+            bg:             #1a1813,
+
+            // style3-bg-color:        #1a1813,
             fg-bold:        #ffffff,
             fg:             mix(#00f0ff, #ffffff, 25%),
             fg-light:       mix(#00f0ff, #ffffff, 40%),
@@ -88,7 +91,8 @@
         ),
 
         accent5: (
-            bg:             #222,
+            // bg:             #222,
+            bg:             #1a1813,
             fg-bold:        #ffffff,
             fg:             mix(#505393, #ffffff, 25%),
             fg-light:       mix(#505393, #ffffff, 40%),

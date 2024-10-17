@@ -1662,7 +1662,7 @@ input[type=radio] + label:before {
   color: #00ffcc;
 }
 .icon.style2 {
-  color: #00f0ff;
+  color: #1a1813;
 }
 .icon.style3 {
   color: #76ddff;
@@ -2393,10 +2393,10 @@ button:disabled,
   }
 }
 .wrapper.style2 {
-  background-color: #222;
+  background-color: #1e1808;
 }
 .wrapper.style3 {
-  background-color: #222;
+  background-color: #1a1813;
   color: rgb(211.25, 212, 228);
 }
 .wrapper.style3 strong, .wrapper.style3 b {
@@ -2438,7 +2438,7 @@ button:disabled,
 }
 .wrapper.style3 select option {
   color: #ffffff;
-  background: #222;
+  background: #1a1813;
 }
 .wrapper.style3 input[type=checkbox] + label,
 .wrapper.style3 input[type=radio] + label {
@@ -2451,7 +2451,7 @@ button:disabled,
 .wrapper.style3 input[type=checkbox]:checked + label:before,
 .wrapper.style3 input[type=radio]:checked + label:before {
   background: #ffffff;
-  color: #222;
+  color: #1a1813;
 }
 .wrapper.style3 ::-webkit-input-placeholder {
   color: rgb(185, 186.2, 211.8) !important;
@@ -3042,6 +3042,9 @@ body.is-preload #banner:after {
   display: flex;
   max-width: 45em;
 }
+#cta .inner .icons li {
+  padding: 0;
+}
 #cta .inner header {
   -moz-order: 1;
   -webkit-order: 1;
@@ -3097,10 +3100,11 @@ body.is-preload #banner:after {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
 }
 #timeline .vLine {
   border-left: 4px solid #aaaaaa;
-  height: 400px;
+  height: 1300px;
 }
 #timeline .entries {
   width: calc(100% - 80px);
@@ -3118,6 +3122,11 @@ body.is-preload #banner:after {
 #timeline .entries .entry:not(:first-child) {
   margin-top: -60px;
 }
+#timeline .entries .entry .date {
+  font-size: clamp(12px, 1vw, 18px);
+  color: rgba(255, 255, 255, 0.3333333333);
+  line-height: 1.4em;
+}
 #timeline .entries .entry .title {
   font-size: 32px;
   position: relative;
@@ -3127,7 +3136,13 @@ body.is-preload #banner:after {
   color: #ce7b1c;
 }
 #timeline .entries .entry .title .inline-title {
+  font-size: calc(4px + 1.4vw);
+  line-height: 1.4em;
+  margin: 0;
+}
+#timeline .entries .entry .title .inline-date {
   font-size: 50%;
+  color: rgba(255, 255, 255, 0.3333333333);
   line-height: 1.4em;
   margin: 0;
 }
@@ -3177,7 +3192,7 @@ body.is-preload #banner:after {
     font-size: 24px;
   }
   #timeline .entries .entry .title:before {
-    left: -62px;
+    left: -63px;
     right: 0;
     transform: translateX(-50%);
   }
@@ -3186,7 +3201,7 @@ body.is-preload #banner:after {
     float: none;
   }
   #timeline .entries .entry:nth-child(2n) .title:before {
-    left: -62px;
+    left: -63px;
     right: auto;
     transform: translateX(-50%);
   }

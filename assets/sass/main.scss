@@ -1350,7 +1350,7 @@
 		}
 
 		&.style2 {
-			background-color: _palette(bg);
+			background-color: _palette(banner-pic-dark-color);
 		}
 
 		&.style3 {
@@ -1736,6 +1736,12 @@
 			@include vendor('display', 'flex');
 			max-width: 45em;
 
+            .icons {
+              li {
+                padding: 0;
+              }
+            }
+
 			header {
 				@include vendor('order', '1');
 				padding-right: 3em;
@@ -1794,10 +1800,11 @@
           justify-content: center;
           // height: 100vh;
           align-items: center;
+          margin-top: 50px;
       }
       .vLine {
           border-left: 4px solid #aaaaaa;
-          height: 400px;
+          height: 1300px;
       }
 	  .entries {
 	    width:calc(100% - 80px);
@@ -1806,6 +1813,7 @@
 	    position: relative;
 	    left:-5px;
 	    .entry {
+          // max-width: ;
 	      width:calc(50% - 80px);
 	      float:left; 
 	      padding:30px;
@@ -1814,6 +1822,12 @@
 	      &:not(:first-child) {
 	        margin-top:-60px;
 	      }
+          .date {
+              font-size: clamp(12px, 1vw, 18px);
+              color: #ffffff55;
+	          line-height:1.4em;
+              // margin: 0;
+          }
 	      .title {
 	        font-size:32px;
 	        // margin-bottom:12px;
@@ -1823,7 +1837,14 @@
               color: #ce7b1c;
             }
             .inline-title {
+              // font-size: calc(80% - 0.2em);
+              font-size: calc(4px + 1.4vw);
+	          line-height:1.4em;
+              margin: 0;
+            }
+            .inline-date {
               font-size: 50%;
+              color: #ffffff55;
 	          line-height:1.4em;
               margin: 0;
             }
@@ -1877,7 +1898,7 @@
               font-size: 24px; // Adjust font size for mobile
 
               &:before {
-                left: -62px;
+                left: -63px;
                 right: 0;
                 transform: translateX(-50%);
               }
@@ -1889,7 +1910,7 @@
 
               .title {
                 &:before {
-                  left: -62px;
+                  left: -63px;
                   right: auto;
                   transform: translateX(-50%);
                 }
