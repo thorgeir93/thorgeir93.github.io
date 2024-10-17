@@ -617,7 +617,7 @@
 		border: 0;
 		display: inline-block;
 		position: relative;
-        filter: opacity(50%) grayscale(40%);
+        filter: opacity(50%) grayscale(10%) sepia(90%) contrast(50%);
 		// background-color: transparent;
         // filter: 
 
@@ -1079,6 +1079,9 @@
 			@include vendor('order', '2');
 			max-width: 48em;
 			width: 60%;
+            h2 {
+              color: _palette(theme-color);
+            }
 		}
 
 		&:nth-child(2n) {
@@ -1816,6 +1819,9 @@
 	        // margin-bottom:12px;
 	        position: relative;
 	        color:#fff;
+            .year {
+              color: #ce7b1c;
+            }
             .inline-title {
               font-size: 50%;
 	          line-height:1.4em;

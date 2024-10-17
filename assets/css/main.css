@@ -1674,7 +1674,7 @@ input[type=radio] + label:before {
   border: 0;
   display: inline-block;
   position: relative;
-  filter: opacity(50%) grayscale(40%);
+  filter: opacity(50%) grayscale(10%) sepia(90%) contrast(50%);
 }
 .image img {
   border-radius: 3px;
@@ -2176,6 +2176,9 @@ button:disabled,
   order: 2;
   max-width: 48em;
   width: 60%;
+}
+.spotlight .content h2 {
+  color: #ce7b1c;
 }
 .spotlight:nth-child(2n) {
   -moz-flex-direction: row-reverse;
@@ -3119,6 +3122,9 @@ body.is-preload #banner:after {
   font-size: 32px;
   position: relative;
   color: #fff;
+}
+#timeline .entries .entry .title .year {
+  color: #ce7b1c;
 }
 #timeline .entries .entry .title .inline-title {
   font-size: 50%;
