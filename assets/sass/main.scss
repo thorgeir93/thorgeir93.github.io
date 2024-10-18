@@ -617,7 +617,8 @@
 		border: 0;
 		display: inline-block;
 		position: relative;
-        filter: opacity(50%) grayscale(10%) sepia(90%) contrast(50%);
+        // filter: opacity(50%) grayscale(10%) sepia(90%) contrast(50%);
+        filter: opacity(63%) grayscale(40%) contrast(70%);
 		// background-color: transparent;
         // filter: 
 
@@ -1134,6 +1135,10 @@
 
 /* Wrapper */
 
+    #three {
+        background-color: #00000099;
+    }
+
 	@mixin wrapper($p) {
 		background-color: _palette($p, bg);
 		color: _palette($p, fg);
@@ -1358,7 +1363,7 @@
 		}
 
 		&.style4 {
-			background-color: transparent;
+			background-color: #0000009c;
 		}
 
 		&.style5 {
@@ -1953,7 +1958,7 @@
 	#main {
 		> header {
 			@include padding(12em, 0);
-			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../../images/banner.jpg")'));
+			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.8))', 'url("../../images/banner.jpg")'));
 			background-attachment: fixed;
 			background-position: center center;
 			background-repeat: no-repeat;
@@ -2078,7 +2083,7 @@
 
 	body.landing {
 		#page-wrapper {
-			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../../images/banner.jpg")'));
+			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.8))', 'url("../../images/banner.jpg")'));
 			background-attachment: fixed;
 			background-position: center center;
 			background-repeat: no-repeat;
@@ -2099,7 +2104,7 @@
 
 			#banner,
 			.wrapper.style4 {
-				@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../../images/banner.jpg")'));
+				@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.8))', 'url("../../images/banner.jpg")'));
 				background-position: center center;
 				background-repeat: no-repeat;
 				background-size: cover;
