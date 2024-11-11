@@ -618,7 +618,9 @@
 		display: inline-block;
 		position: relative;
         // filter: opacity(50%) grayscale(10%) sepia(90%) contrast(50%);
-        filter: opacity(63%) grayscale(40%) contrast(70%);
+        .spotlight & {
+          filter: opacity(63%) grayscale(40%) contrast(70%);
+        }
 		// background-color: transparent;
         // filter: 
 
@@ -992,6 +994,13 @@
 		list-style: none;
 		padding: 0;
 		width: 100%;
+        
+        .actions {
+          li {
+            width: 100%;
+          }
+        }
+
 
 		li {
 			@include padding(4em, 4em, (0,0,0,2em));
@@ -1368,6 +1377,9 @@
 
 		&.style5 {
 			@include wrapper(accent7);
+            h4 {
+              color:          #b68850;
+            }
 		}
 
 		@include breakpoint('<=medium') {
@@ -1958,7 +1970,7 @@
 	#main {
 		> header {
 			@include padding(12em, 0);
-			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.8))', 'url("../../images/banner.jpg")'));
+			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.8))', 'url("../../images/sports/cycling/bike-bw-generic.jpg")'));
 			background-attachment: fixed;
 			background-position: center center;
 			background-repeat: no-repeat;
@@ -1966,7 +1978,8 @@
 			text-align: center;
 
 			h2 {
-				font-size: 1.75em;
+                color: #b68850;
+				font-size: 3.75em;
 				margin: 0 0 (_size(element-margin) * 0.25) 0;
 			}
 

@@ -1674,6 +1674,8 @@ input[type=radio] + label:before {
   border: 0;
   display: inline-block;
   position: relative;
+}
+.spotlight .image {
   filter: opacity(63%) grayscale(40%) contrast(70%);
 }
 .image img {
@@ -2062,6 +2064,9 @@ button:disabled,
   justify-content: center;
   list-style: none;
   padding: 0;
+  width: 100%;
+}
+.features .actions li {
   width: 100%;
 }
 .features li {
@@ -2527,7 +2532,7 @@ button:disabled,
   background-color: rgba(0, 0, 0, 0.6117647059);
 }
 .wrapper.style5 {
-  background-color: #ffffff;
+  background-color: #000000;
   color: #4E4852;
 }
 .wrapper.style5 strong, .wrapper.style5 b {
@@ -2569,7 +2574,7 @@ button:disabled,
 }
 .wrapper.style5 select option {
   color: #2E3842;
-  background: #ffffff;
+  background: #000000;
 }
 .wrapper.style5 input[type=checkbox] + label,
 .wrapper.style5 input[type=radio] + label {
@@ -2582,7 +2587,7 @@ button:disabled,
 .wrapper.style5 input[type=checkbox]:checked + label:before,
 .wrapper.style5 input[type=radio]:checked + label:before {
   background: #2E3842;
-  color: #ffffff;
+  color: #000000;
 }
 .wrapper.style5 ::-webkit-input-placeholder {
   color: #8E8892 !important;
@@ -2649,6 +2654,9 @@ button:disabled,
   .wrapper.style5 .features li {
     border-top-color: #dfdfdf;
   }
+}
+.wrapper.style5 h4 {
+  color: #b68850;
 }
 @media screen and (max-width: 980px) {
   .wrapper {
@@ -3233,10 +3241,10 @@ body.is-preload #banner:after {
 /* Main */
 #main > header {
   padding: 12em 0 10em 0;
-  background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url("../../images/banner.jpg");
-  background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url("../../images/banner.jpg");
-  background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url("../../images/banner.jpg");
-  background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url("../../images/banner.jpg");
+  background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url("../../images/sports/cycling/bike-bw-generic.jpg");
+  background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url("../../images/sports/cycling/bike-bw-generic.jpg");
+  background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url("../../images/sports/cycling/bike-bw-generic.jpg");
+  background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url("../../images/sports/cycling/bike-bw-generic.jpg");
   background-attachment: fixed;
   background-position: center center;
   background-repeat: no-repeat;
@@ -3244,7 +3252,8 @@ body.is-preload #banner:after {
   text-align: center;
 }
 #main > header h2 {
-  font-size: 1.75em;
+  color: #b68850;
+  font-size: 3.75em;
   margin: 0 0 0.5em 0;
 }
 #main > header p {
